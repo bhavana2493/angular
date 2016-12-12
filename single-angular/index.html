@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<title>Single Page App </title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+	 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-app="mainApp">
+
+	<header>
+		<h1><a href="#">Single Page App </a></h1>
+	</header>
+
+	<div class="main-content">
+
+		<div ui-view></div>
+
+	</div>
+
+
+	<script src="config.js"></script>
+	<script src="app.js"></script>
+        <script src="services/retrivedata.js"></script>
+
+    <script src="controller/prodctrl.js"></script>
+
+
+</body>
+
+</html>

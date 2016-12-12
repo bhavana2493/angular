@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Angular JS Login Application</title>
+        <script src="bower_components/angular/angular.min.js"></script>
+    </head>
+    <body>
+        <h2> Loginform </h2>
+        <div ng-app="mainApp" ng-controller="logincontroller">
+            User Name: <input type="text" ng-model="login.username"><br><br>
+            Password: <input type="password" ng-model="login.password"><br> <br>
+            <input type="button" value="submit" ng-click="login.form()"/>
+            </div>
+            <script>
+                var mainApp=angular.module("mainApp",[]);
+                mainApp.controller('logincontroller',function($scope){
+                    $scope.login={
+                        username:"",
+                        password:"",
+                        form:function(){
+                            var loginObject=$scope.login;
+                            console.log("username:"+loginObject.username)
+                            console.log("password:"+loginObject.password)
+                        }
+
+                    };
+                });
+                </script>
+    </body>
+    </html>

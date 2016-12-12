@@ -1,0 +1,77 @@
+<div class="all-products page">
+	<div class="filters">
+		<!--<form>-->
+
+		<div class="filter-criteria">
+			<span>Manufacturer</span>
+			<div ng-repeat="m in manufacturerGroup">
+				<label><input type="checkbox" name="manufacturer"  ng-model="usemanufact[m]">{{m}}</label>
+			</div>
+			<!--<span ng-repeat="(um,mm) in usemanufact">
+							{{um}},{{mm}}
+						</span>-->
+		</div>
+
+		<div class="filter-criteria">
+			<span>Screen Size</span>
+			<div ng-repeat="m in storageGroup">
+				<label><input type="checkbox" name="storage" ng-model="usestorage[m]">{{m}} GB</label>
+			</div>
+		</div>
+
+		<div class="filter-criteria">
+			<span>OS</span>
+			<div ng-repeat="m in osGroup">
+				<label><input type="checkbox" name="os" ng-model="useos[m]">{{m}}</label>
+			</div>
+		</div>
+
+		<div class="filter-criteria">
+			<span>Camera</span>
+			<div ng-repeat="m in cameraGroup">
+				<label><input type="checkbox" name="camera" ng-model="usecamera[m]">{{m}}Mpx</label>
+			</div>
+		</div>
+
+		<!--<button>Clear filters</button>-->
+
+		<!--</form>-->
+
+	</div>
+	<ul class="products-list">
+
+		<li ng-repeat="item in filteredproduct" data-index="{{item.id}}" ng-click="dispSingle(item)" 
+		data-toggle="modal" data-target=#{{item.id}} type="button">
+			<a href="#" class="product-photo"><img ng-src="{{item.image.small}}" height="130" alt="{{item.name}}" /></a>
+			<h2><a href="#"> {{item.name}} </a></h2>
+			<ul class="product-description">
+				<li><span>Manufacturer: </span>{{item.specs.manufacturer}}</li>
+				<li><span>Storage: </span>{{item.specs.storage}} GB</li>
+				<li><span>OS: </span>{{item.specs.os}}</li>
+				<li><span>Camera: </span>{{item.specs.camera}} Mpx</li>
+			</ul>
+			<button>Buy Now!</button>
+			<p class="product-price">{{item.price}}$</p>
+			<div class="highlight"></div>
+		</li>
+
+	</ul>
+	<div class="single-product">
+		<div class="modal fade" id="{{single.id}}" role="dialog">
+			<div class="modal-dialog modal-lg modal-md modal-sm modal-xs">
+				<div class="modal-content">
+					<div class="modal-header ">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-tittle">{{single.name}}</h4>
+					</div>
+					<div class="modal-body">
+
+						<img ng-src="{{single.image.large}}" class="img-responsive" />
+						<p>{{single.description}}</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

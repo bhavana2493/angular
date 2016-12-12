@@ -1,0 +1,27 @@
+<div class="all-products page">
+
+	<!--<ul class="products-list">
+
+		<li ng-repeat="item in product" data-index="{{item.id}}" ng-click="dispSingle(item)" 
+		data-toggle="modal" data-target=#{{item.id}} type="button">
+			<a href="#" class="product-photo"><img ng-src="{{item.image.small}}" height="130" alt="{{item.name}}" /></a>
+			<h2><a href="#"> {{item.name}} </a></h2>
+			<ul class="product-description">
+				<li><span>Manufacturer: </span>{{item.specs.manufacturer}}</li>
+				<li><span>Storage: </span>{{item.specs.storage}} GB</li>
+				<li><span>OS: </span>{{item.specs.os}}</li>
+				<li><span>Camera: </span>{{item.specs.camera}} Mpx</li>
+			</ul>
+			<button>Buy Now!</button>
+			<p class="product-price">{{item.price}}$</p>
+			<div class="highlight"></div>
+		</li>
+
+	</ul>-->
+	<p>id: <input type="text" name="firstName" ng-model="id" required /></p>
+    <!--<p>First Name: <input type="text" name="lastName" ng-model="name" required /></p>-->
+    <button ng-click="SendData()">Submit</button>
+    <hr />
+    {{ PostDataResponse }}
+	
+</div>
